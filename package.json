@@ -28,8 +28,7 @@
   },
   "dependencies": {
     "@hyas/bootstrap": "^1.0.2",
-    "gethyas": "^2.2.0",
-    "material-design-icons": "^3.0.1",
+    "gethyas": "^2.2.0"
   },
   "devDependencies": {
     "prettier": "^3.0.3",
