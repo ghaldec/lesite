@@ -1,0 +1,15 @@
+node_modules
+node_modules_bak
+public
+resources
+.netlify
+.hugo_build.lock
+.vscode
+.frontmatter
+.directories
+bak_part
+*bak*
+*useless*
+*.BAK*
+*USELESS*
+frontmatter.json
