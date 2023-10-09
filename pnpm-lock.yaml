@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@hyas/bootstrap':
-    specifier: ^1.0.2
-    version: 1.0.2
+    specifier: ^1.0.3
+    version: 1.0.3
   gethyas:
     specifier: ^2.2.0
     version: 2.2.0(react-dom@16.14.0)(react@16.14.0)
@@ -1362,8 +1362,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: false
 
-  /@hyas/bootstrap@1.0.2:
-    resolution: {integrity: sha512-sj+XgWMZPokhuCPkewrM1NvOhM65N3LyojRr9IzIU2fZC6rCGCHY0qyZjw2EBcOGlzUr8hK0o9BltEQ5TqhOhA==}
+  /@hyas/bootstrap@1.0.3:
+    resolution: {integrity: sha512-6/gzHgITym/NYYaES+nvR6qy/f/enRcelsW/pkTtbqMLS3ftBmDDs6yVFx/Ds4ybZOVVj0EVXXha30mogHoBGw==}
     engines: {node: '>=16.12.0'}
     dependencies:
       '@popperjs/core': 2.11.8
