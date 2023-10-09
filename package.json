@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@hyas/bootstrap": "^1.0.2",
-    "gethyas": "^2.2.0"
+    "gethyas": "^2.2.1"
   },
   "devDependencies": {
     "prettier": "^3.0.3",
