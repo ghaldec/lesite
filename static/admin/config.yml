@@ -2,6 +2,7 @@ backend:
 ## prod →
   name: github
   repo: encas-parka/lesite
+  branch: main
   # branch: master # Branch to update (optional; defaults to master)
   open_authoring: true  #Permettre un PR sur github sans l'acces aux dépot
 
