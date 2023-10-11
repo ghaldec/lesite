@@ -1,7 +1,5 @@
 <div x-data="searchInput">
   <div :open="isOpen">
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">{{ partial "inline-svg" (dict "src" "fonticons/search" "rem" 2)}}</span>
     <input
         type="text"
         @input="getRecipes"
@@ -11,7 +9,6 @@
         autofocus
         id="qsearch"
       />
-    </div>
     
     <template x-for="recipe in getRecipes" key:="recipe.url">
      <a :href="recipe.url">
