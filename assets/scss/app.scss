@@ -28,17 +28,13 @@
 @import "layouts/posts";
 @import "layouts/sidebar";
 
-// material-design-icons
-// @import "material-design-icons/iconfont/material-icons";
-
-/** import vuetify */
-// @import "vuetify/dist/vuetify.min";
-
 // CUSTOM Cookbook import
+@import "common/custom";
 @import "components/postcard";
 @import "components/recipe-card";
 @import "components/recette-card";
 @import "components/breadcrumb";
-@import "components/custom";
+@import "components/inline-svg";
 
-// @import "components/inline-svg"
+//
+@import "common/print";

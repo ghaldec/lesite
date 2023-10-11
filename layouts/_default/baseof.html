@@ -10,7 +10,8 @@
    <body class="{{ delimit (.Scratch.Get "class") " " }}">   */}}
 
 {{/* ... */}}
-    
+
+    {{ block "layout-header-script" .}} {{end -}}    
     {{ partial "header/header.html" . }}
     <div class="wrap container" role="document">
       <div class="content">
@@ -20,8 +21,7 @@
     {{ block "sidebar-footer" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
     {{ partial "footer/script-footer.html" . }}
-
-    {{ block "page-script" . }} {{end}} 
+    {{ block "layout-footer-script" . }} {{end -}} 
     {{/* For specific layout script 
     USAGE: Insert at the end of the layout page:
 

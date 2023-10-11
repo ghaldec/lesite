@@ -23,6 +23,7 @@
 [context.next.environment]
   HUGO_ENV = "next"
 
+# XXX
 # [[plugins]]
 #   package = "netlify-plugin-submit-sitemap"
 
@@ -47,6 +48,8 @@
 # Redirects and rewrites — https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
 
 # Custom headers — https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file
+
+# TODO CSP
 [[headers]]
  for = "/*"
   [headers.values]

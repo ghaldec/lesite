@@ -29,8 +29,6 @@
       <img src="{{ $image.RelPermalink }}" alt="" class="w-96">
     </div> */}}
     <div class="row">
-      
-      
       <div class="col-lg-4 mt-5" :class="{ opacify: disableFilters }"> {{/* Filtre SIDE */}}
         {{/*  <div>
           <label>
@@ -67,8 +65,8 @@
             <div class="col-md-6 mb-3">
               <h4>Testé</h4> <!-- TODO -->
               <div v-for="check in allcheck" :key="check">
-                <label>
-                  <input type="checkbox" v-model="filters['check']" :value="check" />
+                <label v-show="(check === 'Oui')">
+                  <input type="checkbox" v-model="filters['check']" :value="check"/>
                   <span>[[check]]</span>
                 </label>
               </div>
@@ -132,9 +130,29 @@
       
       
       <div class="col-lg-8"> {{/* Recette CARDS */}}
-        <h3>{{ .Title | pluralize }}</h3> 
+        <nav class="nav nav-underline nav-fill my-4">
+          {{ if eq .Title "Recettes" }}
+            <a class="nav-link active fw-bold" aria-current="page" href="#">Toutes les recettes</a>
+          {{else}}
+            <a class="nav-link fw-bold" href="/recettes">Toutes les recettes</a></a>
+          {{ end }}
+
+          {{ $thispage := .Title }}
+          
+          {{ range  (.Site.GetPage "section" "recettes").Pages }}
+            {{ if eq .Title $thispage }}
+              <a class="nav-link active fw-bold" aria-current="page" href="#">{{.Title}}</a>
+            {{ else }}
+               <a class="nav-link fw-bold" href="{{.RelPermalink}}">{{.Title}}</a></a>
+            {{ end }}
+          
+          {{ end }}
+      
+        </nav>      
+        
+        <div class="row">
     
-        <div class="input-group"> {{/* Champs de recherche */}}
+        <div class="input-group my-4"> {{/* Champs de recherche */}}
           <input
           class="form-control"
           type="text"
@@ -185,13 +203,15 @@
               <span v-show="filters" class="small text-muted">...</span>
             </div>
           
-        </div>
+        </div> 
+
+
         {{/*  Les recettes CARDS  */}}
         <div  
-        class="fhide card my-2 p-3"
+        class="fhide card my-2 ms-3 p-3"
         v-for="(recipe, key) in recipes"
         :key="key"
-        :class="{fshow: filteredRecipes.includes(recipe) }"
+        :class="{fshow: filteredRecipes.includes(recipe)}"
         >
         <a :href="[[recipe.url]]" class="stretched-link"></a>
 

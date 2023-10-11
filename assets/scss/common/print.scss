@@ -1,223 +1,31 @@
-// Champ formulaire quantité d'assietes
-input[type="number"] {
-  width: 100px;
-}
-
-
-//// Vue.js script filters
-
-// Boutons des filtres
-
-.filters {
-  display: flex;
-}
-
-.filters>div {
-  flex: 1;
-}
-
-.filters>div:last-child {
-  columns: 2;
-}
-
-.filters>div:last-child div {
-  column-span: all;
-}
-
-.filters label {
-  display: block;
-}
-
-// cacher/montrer les recettes correspondant aux filtres avec vuejs
-.fhide {
-  display: none;
-}
-
-.fshow {
-  display: block;
-}
-
-//// Boite des boutons de filtres, 
-.box {
-  margin-bottom: 1.5em;
-  padding: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.175) 0px 3px 5px;
-  border: 1px solid $primary-2;
-  border-radius: 5px
-}
-
-.box h4 {
-  padding: 2px;
-  margin: 1px 10px 2px 0;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.search-wrapper {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  background-color: #f6f8fa;
-  @media (min-width: 1024px) {
-    display: flex;
-  }
-}
-
-.search-module {
-  position: relative;
-  min-width: 60%;
-}
-
-
-/* Styles pour les résultats de recherche */
-.search-module .search-results {
-  position: absolute;
-  top: 130%;
-  left: 0;
-  min-width: 100%;
-  max-height: 600px;
-  overflow-y: auto;
-  background-color: #f6f8fa;
-  border: 1px solid $primary-2;
-  // border-top: none;
-  border-radius: 0 0 4px 4px;
-  z-index: 99;
-    a {
-        display: block;
-        height: 100%;
-        width: 100%;
-        text-decoration: none;
-        z-index: 100;
-      }
-
-    /* Ajuster en fonction de la taille de l'en-tête de la page */
-}
-.searchCard {
-  padding: 1rem;
-  margin: .8rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #FFF;
-
-}
-
-.searchCard:hover {
-  transition: 0.1s ease-in;
-  border-color: $primary-2;
-  box-shadow: rgba($primary-2, 0.2) 0px 3px 3px;
-}
-
-.searchCard .badge {
-  font-size: .65rem;
-  @media (max-width: 768px) {
-      display: none;
-    }
-}
-
-
-
-
-/// Modifieurs 
-
-.fs-x-sm {
-  font-size: 0.65em;
-  margin: -.2em 0;
-}
-
-.fs-xx-sm {
-  font-size: 0.55em
-}
-
-// Background color
-
-.bg-red {
-  background-color: rgba(156, 7, 7, 0.6);
-}
-
-
-
-.bg-dark-red {
-  background-color: $red-primary-4
-}
-
-.bg-green {
-  background-color: rgba(0, 96, 29, 0.621);
-  color: whitesmoke;
-}
-.bg-green-alt {
-  background-color: rgba(0, 96, 29, 0.368);
-  color: whitesmoke;
-}
-
-.bg-orange {
-  background-color: rgba(212, 99, 0, 0.6);
-}
-
-.bg-grey {
-  background-color: rgba(174, 174, 174, 0.6);
-  color: black;
-}
-
-
-.bg-blue {
-  background-color:rgba(25, 149, 211, 0.501)
-}
-
-.bg-pink {
-  background-color:rgba(199, 31, 202, 0.501)
-}
-
-
-.p-top{ // inutilisé ?
-  position: absolute;
-  top: 100px ; 
-  right: 0;
-  padding: 0 1rem;
-}
-
-
-// Sidefilter pour la liste des ingredient
-.sidefilter {
-  padding: 0;
-  position: sticky;
-  top: 100px !important;
-  width: 300px;
-  min-height: 100%;
-}
-
-.p-stick {
-  position: sticky;
-  top: 3em;
-    z-index: 9
-}
-
-.z-9 {
-  z-index: 9;
-}
-
-@media screen  and (max-width: 960px) {
-  .sidefilter {
-  position: relative;
-  padding: 0;
-  min-width: 100%;
-  }
-}
-
-
 // Print Option
 
-@media not print{
-.printonly{ display: none !important; }
+@media not print {
+  .printonly {
+    display: none !important;
+  }
 }
 
 @media print {
 
-  head, header, header *, footer, aside, nav, form, iframe, .menu, .hero, .adslot {
+  head,
+  header,
+  header *,
+  footer,
+  aside,
+  nav,
+  form,
+  iframe,
+  .menu,
+  .hero,
+  .adslot {
     visibility: hidden;
-    display:  none;
+    display: none;
   }
-  .navbar, .navbar * {
-    display:  none;
+
+  .navbar,
+  .navbar * {
+    display: none;
   }
 
   // body, body * {
@@ -235,7 +43,7 @@ input[type="number"] {
 
 
   @page {
-  size: A4;
+    size: A4;
   }
 
   /*!
@@ -658,7 +466,7 @@ input[type="number"] {
   ul,
   ol,
   tr,
-  a   {
+  a {
     page-break-inside: avoid
   }
 
@@ -690,8 +498,7 @@ input[type="number"] {
   }
 
   h3,
-  h4
-  h5,
+  h4 h5,
   h6 {
     margin: .3cm 0
   }
@@ -717,7 +524,7 @@ input[type="number"] {
 
   a[href^='http']:after,
   a[href^='ftp']:after {
-    content: " ("attr(href) ")";
+    content: " (" attr(href) ")";
     font-size: 80%
   }
 
@@ -730,7 +537,7 @@ input[type="number"] {
 
   abbr[title]:after,
   acronym[title]:after {
-    content: " ("attr(title) ")"
+    content: " (" attr(title) ")"
   }
 
   .page-break,
@@ -768,38 +575,45 @@ input[type="number"] {
   }
 
   // From bootsrap-print-css
-    body {
-      min-width: 100% !important;
-      // min-width: 992px !important;
+  body {
+    min-width: 100% !important;
+    // min-width: 992px !important;
 
-    }
-    .container {
-      min-width: 100% !important;
-      // min-width: 992px !important;
-    }
-    .badge {
-      border: 1px solid #000;
-    }
-    .table {
-      border-collapse: collapse !important;
-    }
-    .table td,
-    .table th {
-      background-color: #fff !important;
-    }
-    .table-bordered th,
-    .table-bordered td {
-      border: 1px solid #dee2e6 !important;
-    }
-    .table-dark {
-      color: inherit;
-    }
-    .table-dark th,
-    .table-dark td,
-    .table-dark thead th,
-    .table-dark tbody + tbody {
-      border-color: #dee2e6;
-    }
+  }
+
+  .container {
+    min-width: 100% !important;
+    // min-width: 992px !important;
+  }
+
+  .badge {
+    border: 1px solid #000;
+  }
+
+  .table {
+    border-collapse: collapse !important;
+  }
+
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6 !important;
+  }
+
+  .table-dark {
+    color: inherit;
+  }
+
+  .table-dark th,
+  .table-dark td,
+  .table-dark thead th,
+  .table-dark tbody+tbody {
+    border-color: #dee2e6;
+  }
 
   // Vuetify custom
 
@@ -809,12 +623,13 @@ input[type="number"] {
   .v-data-table--dense>.v-data-table__wrapper>table>tbody>tr>th,
   .v-data-table--dense>.v-data-table__wrapper>table>tfoot>tr>th,
   .v-data-table--dense>.v-data-table__wrapper>table>thead>tr>th {
-  font-size:.75rem !important; 
-  height:1cm !important;
-  border: 1px solid black;
-  padding: 2px, 12px !important;
-  line-height: 1.125;
+    font-size: .75rem !important;
+    height: 1cm !important;
+    border: 1px solid black;
+    padding: 2px, 12px !important;
+    line-height: 1.125;
   }
+
   .v-application * {
     box-shadow: none !important;
   }
@@ -844,6 +659,7 @@ input[type="number"] {
     table-layout: fixed;
     width: 15%;
   }
+
   .print-75p100 {
     font-size: 75% !important;
   }
