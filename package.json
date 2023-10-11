@@ -27,8 +27,8 @@
     "node": ">=16.12.0"
   },
   "dependencies": {
-    "gethyas": "^2.2.1"
-    "@hyas/bootstrap": "^1.0.3",
+    "gethyas": "^2.2.1",
+    "@hyas/bootstrap": "^1.0.3"
 
   },
   "devDependencies": {
